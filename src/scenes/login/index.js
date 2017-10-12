@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { View, Image } from 'react-native-elements';
 import Style from './style';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from "redux-form";
 import { doLogin } from './actions';
 import Input from '../../components/input';
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text,  Form, Item, Label } from 'react-native-elements';
+import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text,  Form, Item, Label } from 'native-base';
 
 const validate = values => {
   const error = {};
@@ -59,7 +58,7 @@ class LoginPage extends Component {
     return (
       <Container style={Style.viewStyle}>
         <Content>
-            <View>
+            <Body>
                 <Form style={Style.allwith}>
                     {this.props.error && <Text>{this.props.error}</Text>}
                     <Input name="email" label="Email" icon="person"/>
@@ -71,7 +70,7 @@ class LoginPage extends Component {
                         <Text>Entrar</Text>
                     </Button>
                 </Form>
-            </View>
+            </Body>
         </Content>
         <Footer>
           <FooterTab>

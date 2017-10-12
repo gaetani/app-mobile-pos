@@ -3,14 +3,12 @@ import React, { Component } from 'react';
 import { connect, Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import LoginPage from './src/scenes/login';
-import HomeScreen from './src/scenes/home';
 import { DrawerNavigator } from 'react-navigation';
 
 import SideMenu from './src/scenes/SideMenu';
 
 const Router = DrawerNavigator({
-  login: { screen: LoginPage },
-  home: { screen: HomeScreen },
+  login: { screen: LoginPage }
  },
  {
   contentComponent: props => <SideMenu {...props} />,

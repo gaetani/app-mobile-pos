@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Text, Item, Input as NInput } from 'react-native-elements';
+import { Icon, Text, Item, Input as NInput } from 'native-base';
 
 import { Field } from "redux-form";
 
